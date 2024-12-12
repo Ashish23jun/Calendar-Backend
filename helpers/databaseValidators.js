@@ -15,6 +15,7 @@ const eventExistsById = async (req, res, next) => {
   next();
 };
 
+
 const isEventOwner = async (req, res, next) => {
   const userId = req.id;
   if (!userId) {

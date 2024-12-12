@@ -1,8 +1,8 @@
 const Event = require("../models/Event");
-
 const getEvents = async (req, res) => {
   try {
-    const events = await Event.find().populate("user", "name");
+    // Fetch only the events belonging to the logged-in user
+    const events = await Event.find({ user: req.id }).populate("user", "name");
 
     return res.json({
       ok: true,
@@ -16,6 +16,7 @@ const getEvents = async (req, res) => {
     });
   }
 };
+
 
 const createEvent = async (req, res) => {
   const { title, start, end, notes } = req.body;
