@@ -19,16 +19,13 @@ app.use(express.static("public"));
 // Read and parse body
 app.use(express.json());
 
+app.get("/test", (req, res) => {
+  res.send("Hello, World!");
+});
+
 // Routes
 app.use("/api/auth", require("./routes/auth.js"));
 app.use("/api/events", require("./routes/events.js"));
-app.get("/*", (req, res) => {
-  res.sendFile(path.join(__dirname + "/public/index.html"));
-});
-
-app.get("/", (req, res) => {
-  res.send("Hello World!");
-});
 
 // Listening PORT
 const port = process.env.PORT || 5000;
