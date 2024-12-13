@@ -7,7 +7,8 @@ const { google } = require("googleapis");
 const CLIENT_ID =
   "1006583541945-c3pur533l7mt7vofn9f251heapao6qu7.apps.googleusercontent.com";
 const CLIENT_SECRET = "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";
-const REDIRECT_URI = "http://localhost:8080/api/auth/google/callback";
+// const REDIRECT_URI = "http://localhost:8080/api/auth/google/callback";
+const REDIRECT_URI="https://calendar-backend-wtlz.onrender.com/api/auth/google/callback";
 
 const oauth2Client = new google.auth.OAuth2(
   CLIENT_ID,
