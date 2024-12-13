@@ -158,7 +158,7 @@ const googleCallback = async (req, res) => {
     const token = await generateJWT(user.id, user.name);
 
     // Redirect to the front-end (applying token to URL)
-    return res.redirect(`http://localhost:3000?token=${token}`);
+    return res.redirect(`https://calendar-frontend-lovat.vercel.app/?token=${token}`);
   } catch (error) {
     console.error("Error during Google OAuth login:", error);
     return res
