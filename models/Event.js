@@ -21,6 +21,10 @@ const EventSchema = Schema({
     ref: "User",
     required: [true, "User is required"],
   },
+  googleCalendarId: {
+    // New field to store Google Calendar event ID
+    type: String,
+  },
 });
 
 EventSchema.methods.toJSON = function () {

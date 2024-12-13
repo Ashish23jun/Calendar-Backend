@@ -4,12 +4,20 @@
 
 const { Router } = require("express");
 const { check } = require("express-validator");
-const { createUser, loginUser, renewToken } = require("../controllers/auth");
+const {
+  createUser,
+  loginUser,
+  renewToken,
+  googleLogin,
+  googleCallback,
+} = require("../controllers/auth");
 const { emailExists } = require("../helpers/databaseValidators");
 const validateFields = require("../middlewares/validateFields");
 const validateJWT = require("../middlewares/validateJWT");
 const router = Router();
+const { google } = require("googleapis");
 
+// Existing routes
 router.post(
   "/register",
   [
@@ -41,6 +49,9 @@ router.post(
   loginUser
 );
 
-router.get("/renew",  validateJWT, renewToken);
+router.get("/renew", validateJWT, renewToken);
+
+router.post("/google", googleLogin);
+router.get("/google/callback", googleCallback);
 
 module.exports = router;
