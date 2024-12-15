@@ -32,10 +32,10 @@ Local installation:
 
 ```bash
 # Clone this repository
-$ git clone https://github.com/srajiv9496/Calendly-Backend.git
+$ git clone https://github.com/Ashish23jun/Calendar-Backend.git
 
 # Change directory to the project path
-$ cd Calendly-Backend
+$ cd Calendar-Backend
 ```
 
 ---
@@ -43,7 +43,7 @@ $ cd Calendly-Backend
 **Server setup:**
 ```bash
 # Change directory to the server path
-$ cd Calendly-Backend
+$ cd Calendar-Backend
 
 # Install dependencies
 $ npm install
@@ -62,21 +62,6 @@ JWT_SECRET_KEY=RANDOMKEY
 
 ---
 
-**Client setup:**
-```bash
-# Go back to the project path
-$ cd ..
-
-# Change directory to the client path
-$ cd Calendly-Frontend
-
-# Install dependencies
-$ npm install
-
-# Copy .env file
-$ cp .env.example .env
-```
-
 client **.env** file setup:
 
 ```shell
@@ -87,7 +72,7 @@ REACT_APP_API_URL="http://localhost:5000/api"
 
 ```bash
 # Open terminal in project path and run
-$ cd Calendly-Backend
+$ cd Calendar-Backend
 $ npm start
 
 
@@ -106,4 +91,4 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 * [MongoDB](https://www.mongodb.com/) - NoSQL database
 
 ---
-# Calendly-Backend
+# Calendar-Backend
